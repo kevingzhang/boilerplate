@@ -23,3 +23,8 @@ root = global ? window
 console.log "root is " + root
 
 root.Players = new Meteor.Collection('player')
+
+root.Players.allow
+  insert: ()->true
+  update: ()->true
+  remove: ()->true
